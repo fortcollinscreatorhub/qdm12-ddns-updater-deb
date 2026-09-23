@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# Copyright 2023-2026 Stephen Warren <swarren@wwwdotorg.org>
+# SPDX-License-Identifier: MIT
+
+set -e
+
+setup_user() {
+    if ! getent passwd qdm12ddns >/dev/null; then
+        adduser --quiet --system --group --no-create-home --home /opt/qdm12-ddns-updater --shell /usr/sbin/nologin qdm12ddns
+    fi
+}
+
+setup_perms() {
+    chgrp -R qdm12ddns /opt/qdm12-ddns-updater/etc
+    chmod -R ug+wX /opt/qdm12-ddns-updater/etc
+    chmod -R o-rwx /opt/qdm12-ddns-updater/etc
+    chown -R qdm12ddns:qdm12ddns /opt/qdm12-ddns-updater/var
+    chmod -R ug+wX /opt/qdm12-ddns-updater/var
+    chmod -R o-rwx /opt/qdm12-ddns-updater/var
+}
+
+if [ "$1" = configure ]; then
+    setup_user
+    setup_perms
+fi
+
+#DEBHELPER#

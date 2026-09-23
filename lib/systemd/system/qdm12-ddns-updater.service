@@ -1,0 +1,14 @@
+[Unit]
+Description=qdm12 ddns-updater
+
+[Service]
+Type=exec
+User=qdm12ddns
+Group=qdm12ddns
+ExecStart=/opt/qdm12-ddns-updater/bin/ddns-updater
+Environment=DATADIR=/opt/qdm12-ddns-updater/var
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=network.target

@@ -1,0 +1,7 @@
+.debhelper/
+debhelper-build-stamp
+qdm12-ddns-updater.debhelper.log
+qdm12-ddns-updater.postrm.debhelper
+qdm12-ddns-updater.substvars
+qdm12-ddns-updater
+files
