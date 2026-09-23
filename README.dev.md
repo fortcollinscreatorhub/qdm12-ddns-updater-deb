@@ -4,7 +4,7 @@ On an x86 Linux PC (e.g. running Debian 12, Ubuntu 22.04, e.g. the NAS
 itself...):
 
 ```shell
-cd https://github.com/qdm12/ddns-updater
+cd qdm12-ddns-updater-deb/ # assuming you didn't tell git to clone it elsewhere
 dpkg-buildpackage -us -uc && \
     scp ../qdm12-ddns-updater_2.1.10-fcch1_amd64.deb root@10.1.10.1:/tmp && \
     ssh root@10.1.10.1 sudo apt -y install --reinstall /tmp/qdm12-ddns-updater_2.1.10-fcch1_amd64.deb
