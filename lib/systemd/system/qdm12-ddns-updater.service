@@ -7,6 +7,7 @@ User=qdm12ddns
 Group=qdm12ddns
 ExecStart=/opt/qdm12-ddns-updater/bin/ddns-updater
 Environment=DATADIR=/opt/qdm12-ddns-updater/var
+Environment=CONFIG_FILEPATH=/opt/qdm12-ddns-updater/etc/config.json
 Restart=always
 RestartSec=10s
 

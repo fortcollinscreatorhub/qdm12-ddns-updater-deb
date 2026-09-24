@@ -15,7 +15,6 @@ install:
 	install -D                      -d $(DESTDIR)/opt/qdm12-ddns-updater/etc/
 	install -m 640 etc/config.json     $(DESTDIR)/opt/qdm12-ddns-updater/etc/
 	install -D                      -d $(DESTDIR)/opt/qdm12-ddns-updater/var/
-	dh_link /opt/qdm12-ddns-updater/etc/config.json /opt/qdm12-ddns-updater/var/config.json
 
 	# Must be in /lib not /opt/... for some reason?
 	install -D -d $(DESTDIR)/lib/systemd/system/
