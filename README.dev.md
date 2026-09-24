@@ -6,15 +6,15 @@ itself...):
 ```shell
 cd qdm12-ddns-updater-deb/ # assuming you didn't tell git to clone it elsewhere
 dpkg-buildpackage -us -uc && \
-    scp ../qdm12-ddns-updater_2.1.10-fcch1_amd64.deb root@10.1.10.1:/tmp && \
-    ssh root@10.1.10.1 sudo apt -y install --reinstall /tmp/qdm12-ddns-updater_2.1.10-fcch1_amd64.deb
+    scp ../qdm12-ddns-updater_2.1.10-fcch2_amd64.deb root@fcchfw1:/tmp && \
+    ssh root@fcchfw1 sudo apt -y install --reinstall /tmp/qdm12-ddns-updater_2.1.10-fcch2_amd64.deb
 ```
 
 Once testing is comlete, upload the package to our website, for easy access
 from machines during setup:
 
 ```shell
-scp ../qdm12-ddns-updater_2.1.10-fcch1_amd64.deb fcch-web:/home/u930-v2vbn3xb6dhb/www/fortcollinscreatorhub.org/public_html/rpi-packages
+scp ../qdm12-ddns-updater_2.1.10-fcch2_amd64.deb fcch-web:/home/u930-v2vbn3xb6dhb/www/fortcollinscreatorhub.org/public_html/rpi-packages
 ```
 
 # Binary origin

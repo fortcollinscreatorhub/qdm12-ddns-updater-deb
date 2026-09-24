@@ -1,3 +1,10 @@
+qdm12-ddns-updater (2.1.10-fcch2) trixie; urgency=medium
+
+  * Use env var CONFIG_FILEPATH to set location of config.json.
+  * Mark config.json as a conffile.
+
+ -- Stephen Warren <swarren@wwwdotorg.org>  Thu, 24 Sep 2026 12:35:14 -0600
+
 qdm12-ddns-updater (2.1.10-fcch1) trixie; urgency=medium
 
   * Initial release.
